@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>注册/登录</title> 
+    <link rel="stylesheet" type="text/css" href="Login.css"/>
+    <script type="text/javascript">
+       function checkForm() {
+          var username = document.getElementById("username").value;
+		  var pwd = document.getElementById("password").value;
+		  if((username=="胡翔昊" && pwd=="01")||(username=="龚磊"&& pwd=="02")||(username=="胡煜珑" && pwd=="03")||(username=="朱芷骞"&& pwd=="04")||(username=="徐鑫潼"&& pwd=="05")||(username=="何琪瀚"&& pwd=="06")||(username=="娄梓琪"&& pwd=="04")){
+		     saveVal();
+		     return true;
+          }
+          else
+                alert("密码不对！")
+                return false;
+}
+       function saveVal() {
+       var inputFirst = document.getElementById("name").value;
+       localStorage.setItem("a", inputFirst);
+
+}
+</script>
+</head>  
+<body>  
+    <div id="login"> 
+        <h1>Login</h1>  
+        <form method="post" action="新主页.html" onsubmit="return checkForm()">
+            <input type="text"  placeholder="用户名" name="name" id="username"></input>
+            <input type="text"  placeholder="密码" name="password" id="password"></input>
+            <button class="but" type="submit" >登录</button>
+        </form>  
+    </div>
+</body>
+</html>  
+
